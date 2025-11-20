@@ -1,0 +1,16 @@
+Just run these in order
+
+hdfs dfs -mkdir -p /user/jaswin/stocks
+hdfs dfs -put stock_prices.csv /user/jaswin/stocks
+
+spark-shell --master local[*]
+
+val stocksDF = spark.read.option("header", "true").option("inferSchema", "true").csv("file:///home/jaswin/ibds/8-sparkwindow/stock_prices.csv")
+stocksDF.show()
+stocksDF.printSchema()
+
+import org.apache.spark.sql.expressions.Window
+import org.apache.spark.sql.functions._
+val windowSpec = Window.partitionBy("Stock").orderBy("Date").rowsBetween(-2, 0)
+val resultDF = stocksDF.withColumn("MA_3", round(avg(col("Close")).over(windowSpec), 2)).select("Date", "Stock", "Close", "MA_3").orderBy("Stock", "Date")
+resultDF.show(50, false)

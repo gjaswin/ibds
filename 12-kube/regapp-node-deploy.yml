@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: regapp-node-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: regapp-node
+  template:
+    metadata:
+      labels:
+        app: regapp-node
+    spec: # <-- This is the corrected level for 'spec:'
+      containers:
+      - name: regapp-node
+        image: regapp-node:1.0 # Modify gjaswin to your dockerhub username
+        ports:
+        - containerPort: 8080

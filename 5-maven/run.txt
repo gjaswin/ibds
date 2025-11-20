@@ -1,0 +1,3 @@
+THIS REQUIRES INTERNET (probably)
+
+Follow mvn.sh

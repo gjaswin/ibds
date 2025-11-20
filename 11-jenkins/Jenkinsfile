@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps {
+                script {
+                    sh 'pip install pytest'
+                    sh 'pytest test_app.py'
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+            }
+        }
+    }
+}

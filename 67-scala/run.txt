@@ -1,0 +1,6 @@
+Run it with
+
+scala -nc filename
+or scala-cli run filename
+
+scala-cli takes too long sometimes, so if it doesnt work, use the first command

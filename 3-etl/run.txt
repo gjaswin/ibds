@@ -1,0 +1,4 @@
+Run the py file:
+python3 etl_pipeline.py
+
+You can add more data to sales_data.csv manually, or modify the py file to handle different csv data

@@ -1,0 +1,7 @@
+Spark is already configured
+Running generate_data.py will generate the customer_churn.csv
+
+Then run:
+spark-submit train_churn_model.py
+
+Trains a logistic regression model to predict customer churn

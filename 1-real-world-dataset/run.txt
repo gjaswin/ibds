@@ -1,0 +1,9 @@
+Open this folder in VSCode
+
+First, run this command in vscode terminal:
+source .venv/bin/activate
+
+Then execute the py file:
+python3 analysis.py
+
+It will create a synthetic customer churn dataset, introduce inconsistencies, solve the inconsistencies by itself, then infers churn rate by geography and churn rate by tenure and produces 2 graphs.

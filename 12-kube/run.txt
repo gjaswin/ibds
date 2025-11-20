@@ -1,0 +1,21 @@
+# Docker desktop did not work properly for me. Use minikube for the cluster instead
+
+docker build -t regapp-node:1.0 .
+
+# This will start minikube
+minikube start
+minikube image load regapp-node:1.0
+
+kubectl config use-context minikube
+kubectl apply -f regapp-node-deploy.yml
+kubectl apply -f regapp-node-service.yml
+kubectl get pods
+kubectl get svc
+
+kubectl port-forward service/regapp-node-service 8080:8080
+
+kubectl scale deployment regapp-node-deployment --replicas=5
+kubectl get pods
+
+# Run after showing output
+minikube stop

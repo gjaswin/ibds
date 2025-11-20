@@ -1,0 +1,10 @@
+Connect to mysql from terminal
+mysql -u root -p
+Password is root
+
+First, create a new db, give it any name:
+create database warehouse1;
+
+Then, execute sql statements in create_tables.sql using mysql console
+Then from insert_data.sql
+Then the 2 statements in analyse_sales.sql - This will give the output

@@ -1,0 +1,12 @@
+etl
+ml-latest-small
+mrjob-env
+scala
+ibds.zip
+hadoop-3.3.6.tar.gz
+spark-3.5.7-bin-hadoop3.tgz
+.venv
+venv
+node_modules
+.scala-build
+.bsp
