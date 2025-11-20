@@ -1,4 +1,4 @@
-# Skip This
+# Skip This if using the current folder
 mvn archetype:generate \
 -DgroupId=com.example \
 -DartifactId=myapp \
