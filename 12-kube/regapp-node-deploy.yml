@@ -11,9 +11,9 @@ spec:
     metadata:
       labels:
         app: regapp-node
-    spec: # <-- This is the corrected level for 'spec:'
+    spec: 
       containers:
       - name: regapp-node
-        image: regapp-node:1.0 # Modify gjaswin to your dockerhub username
+        image: gjaswin/regapp-node:1.0 # Modify gjaswin to your dockerhub username
         ports:
         - containerPort: 8080
